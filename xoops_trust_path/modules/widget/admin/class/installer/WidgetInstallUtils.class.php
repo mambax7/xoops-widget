@@ -561,7 +561,7 @@ class Widget_InstallUtils
         $cri->add(new Criteria('tpl_module',$module->get('dirname')));
         $cri->add(new Criteria('tpl_file',$filename['public']));
     
-        $tpls =& $tplHandler->getObjects($cri);
+        $tpls = $tplHandler->getObjects($cri);
     
         if(count($tpls) > 0)
         {
@@ -623,7 +623,7 @@ class Widget_InstallUtils
         $blockHandler =& Widget_Utils::getXoopsHandler('block');
         $gpermHandler =& Widget_Utils::getXoopsHandler('groupperm');
         $cri = new Criteria('mid',$module->get('mid'));
-        $blocks =& $blockHandler->getObjectsDirectly($cri);
+        $blocks = $blockHandler->getObjectsDirectly($cri);
     
         foreach($blocks as $block)
         {
@@ -721,7 +721,7 @@ class Widget_InstallUtils
         $cri = new CriteriaCompo();
         $cri->add(new Criteria('dirname',$module->get('dirname')));
         $cri->add(new Criteria('func_num',$info->mFuncNum));
-        $blocks =& $blockHandler->getObjects($cri);
+        $blocks = $blockHandler->getObjects($cri);
     
         foreach($blocks as $block)
         {
@@ -745,7 +745,7 @@ class Widget_InstallUtils
         $cri = new CriteriaCompo();
         $cri->add(new Criteria('dirname',$module->get('dirname')));
         $cri->add(new Criteria('func_num',$info->mFuncNum));
-        $blocks =& $blockHandler->getObjects($cri);
+        $blocks = $blockHandler->getObjects($cri);
     
         foreach($blocks as $block)
         {
@@ -853,7 +853,7 @@ class Widget_InstallUtils
         $cri = new CriteriaCompo();
         $cri->add(new Criteria('dirname',$module->get('dirname')));
         $cri->add(new Criteria('func_num',$func_num));
-        $blocks =& $blockHandler->getObjects($cri);
+        $blocks = $blockHandler->getObjects($cri);
     
         $successFlag = true;
         foreach($blocks as $block)

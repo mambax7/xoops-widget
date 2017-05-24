@@ -110,7 +110,7 @@ abstract class Widget_AbstractListAction extends Widget_AbstractAction
 		$this->mFilter->fetch();
 	
 		$handler =& $this->_getHandler();
-		$this->mObjects =& $handler->getObjects($this->mFilter->getCriteria());
+		$this->mObjects = $handler->getObjects($this->mFilter->getCriteria());
 	
 		return WIDGET_FRAME_VIEW_INDEX;
 	}
